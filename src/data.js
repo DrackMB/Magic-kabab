@@ -1,0 +1,65 @@
+const data = {
+    "Pain":[
+        {
+            "name":"Pain",
+            "image":require("./asset/Kebab.png")
+        },
+        {
+            "name":"Galette",
+            "image":require("./asset/Galette.png")
+        }
+    ],
+    "Viande":[
+        {
+            "name":"Viande",
+            "image":require("./asset/Viande.png")
+        },
+        {
+            "name":"Tofu",
+            "image":require("./asset/Tofu.png")
+        }
+    ],
+    "Salade":[
+        {
+            "name":"Salade",
+            "image":require("./asset/Salade.png")
+        },
+        {
+            "name":"Tomates",
+            "image":require("./asset/Tomate.png")
+        },
+        {
+            "name":"Oignons",
+            "image":require("./asset/Oignon.png")
+        }
+    ],
+    "Sauces":[
+        {
+            "name":"Blanche",
+            "image":require("./asset/Sauce-blanche.png")
+        },
+        {
+            "name":"Harissa",
+            "image":require("./asset/Sauce-harissa.png")
+        },
+        {
+            "name":"Andalouse",
+            "image":require("./asset/Sauce-andalouse.png")
+        },
+        {
+            "name":"BBQ",
+            "image":require("./asset/Sauce-bbq.png")
+        },
+        {
+            "name":"Ketchup",
+            "image":require("./asset/Sauce-ketchup.png")
+        },
+        {
+            "name":"CURRY",
+            "image":require("./asset/Sauce-curry.png")
+        }
+    ]
+        
+    
+}
+export default data
