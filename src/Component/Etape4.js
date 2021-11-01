@@ -43,7 +43,8 @@ function Etape4() {
     <ButtonST
       onClick={() => {
         const myKabab = [...location.state,{Souces: sou}];
-        history.push("/recapitulatif", myKabab);
+        console.log(myKabab);
+        history.push("/recapitulatif",myKabab);
       }}
     >
       Continuer

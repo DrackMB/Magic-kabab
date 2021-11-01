@@ -11,7 +11,7 @@ import fakedata from "../data";
 function Etape2() {
   const location = useLocation();
   const history = useHistory();
-  console.log(location.state)
+  console.log(location)
   const { Viande } = fakedata;
   const choix = Viande.map((kabab) => {
     return (

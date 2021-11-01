@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import {
   StyledCounter,
@@ -12,7 +12,7 @@ function Recapitulatif() {
   const location = useLocation();
   const history = useHistory();
   const data = location.state;
-  console.log(data)
+  console.log(data);
   const pain = (
     <ImageCard key={data[0].Pain.name}>
       <img src={data[0].Pain.image.default} alt="pain" />
@@ -47,18 +47,32 @@ function Recapitulatif() {
     <ButtonST
       onClick={() => {
         const myKabab = [...location.state];
-        history.push("/", myKabab);
+        const listOfKababs = JSON.parse(localStorage.getItem("listeKabab"))
+        if(listOfKababs){
+            localStorage.setItem(
+                "listeKabab",
+                JSON.stringify([...listOfKababs,myKabab])
+              );}else {localStorage.setItem(
+                "listeKabab",
+                JSON.stringify([myKabab])
+              );}
+              history.push("/", myKabab);
+        
+
+        
       }}
     >
-      Continuer
+      Commander
     </ButtonST>
   );
   return (
     <div>
       <div>
         <StyledCounter>On Recapitule</StyledCounter>
-        <ContinerStyle>{pain}+{viande}+{choix}+{choix2}</ContinerStyle>
-        {suivant} 
+        <ContinerStyle>
+          {pain}+{viande}+{choix}+{choix2}
+        </ContinerStyle>
+        {suivant}
       </div>
     </div>
   );

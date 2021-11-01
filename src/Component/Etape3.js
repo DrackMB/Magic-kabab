@@ -17,6 +17,7 @@ function Etape3() {
   const history = useHistory();
   const [display, setDisplay] = useState(false);
   const [mySalad, setMySalad] = useState([]);
+  console.log(location.state)
   const { Salade } = fakedata;
   const choix = Salade.map((kabab) => {
     return (
