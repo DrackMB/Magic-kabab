@@ -37,14 +37,14 @@ function Home(params) {
     );
   });
   if (pan) {
-    var panier = pan.map((element) => {
+    var panier = pan.map((element,k) => {
       prix = prix + 11;
       const pain = element[0].Pain.name;
       const viande = element[1].Viande.name;
       const salad = element[2].Salades.map((kabab) => kabab.name + ",");
       const sauce = element[3].Souces.map((kabab) => kabab.name + " ");
       return (
-        <CommendDetaills>
+        <CommendDetaills key = {element[0].Pain.prix}>
           {pain},{viande},{salad},{sauce}
           <FontAwesomeIcon
             icon={faTrash}
@@ -62,8 +62,6 @@ function Home(params) {
       );
     });
   }
-
-  console.log(panier);
   return (
     <div>
       <StyledCounter>Pain au galette?</StyledCounter>
