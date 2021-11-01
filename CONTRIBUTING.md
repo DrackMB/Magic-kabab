@@ -12,19 +12,19 @@ ce REPO c'est la partie Front-End Qui contient :
 *styled-components
 
 #### Dossiers & Fichiers
-*public 
-*src: *asset :contient les images utiliser dans le projet . 
-   *component :contient les composants de l'APP .
-       *Home.js   : page d'acceulle (choix  Pain)
-       *Etape2.js :2 eme page (choix de Viande)
-       *Etape3.js :3 eme page (choix Salades)
-       *Etape4.js :4 eme page (choix Sauces)
-       *Recapitulatif.js : Page Recaputilatif
-       *CommandValide.js : CommandValide
-       *style.js : Contient le style de app (styled-components)
-   *data.js : base de donner utiliser dans l'APP .
-   *App.js : contient les routes (naviger enter les component)
-  
+* public 
+* src:
+   * asset :contient les images utiliser dans le projet . 
+   * component :contient les composants de l'APP .
+       * Home.js   : page d'acceulle (choix  Pain)
+       * Etape2.js :2 eme page (choix de Viande)
+       * Etape3.js :3 eme page (choix Salades)
+       * Etape4.js :4 eme page (choix Sauces)
+       * Recapitulatif.js : Page Recaputilatif
+       * CommandValide.js : CommandValide
+       * style.js : Contient le style de app (styled-components)
+   * data.js : base de donner utiliser dans l'APP .
+   * App.js : contient les routes (naviger enter les component)
 
 #### Comment Naviger Entre les pages (component)
 
