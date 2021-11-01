@@ -44,17 +44,17 @@ plus **localStorage**
 
 #### les Fonctionalités realiser 
 
-*Proposer le choix du pain: pain, galette ou baguette.
+* Proposer le choix du pain: pain, galette ou baguette.
 
-*Proposer le choix de la viande: viande ou tofu.
+* Proposer le choix de la viande: viande ou tofu.
 
-*Proposer d’ajouter de la salade et / ou des tomates et / ou des oignons.
+* Proposer d’ajouter de la salade et / ou des tomates et / ou des oignons.
 
-*Proposer d’ajouter une ou deux sauces (mais pas trois) parmi une sélection de 6 sauces
+* Proposer d’ajouter une ou deux sauces (mais pas trois) parmi une sélection de 6 sauces
 (au choix).
 
-*Une fois qu’un kébab est dans le panier, on affiche celui-ci avec un bouton commander
+* Une fois qu’un kébab est dans le panier, on affiche celui-ci avec un bouton commander
 
-*L’utilisateur peut supprimer un kébab du panier
+* L’utilisateur peut supprimer un kébab du panier
 
 
