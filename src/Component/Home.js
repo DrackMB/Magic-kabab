@@ -19,9 +19,9 @@ function Home(params) {
   const history = useHistory();
   const { Pain } = fakedata;
   const val = localStorage.getItem("listeKabab");
-  const [pan,setPan] = useState(JSON.parse(val));
+  const [pan, setPan] = useState(JSON.parse(val));
   var prix = 0;
-  
+
   const choix = Pain.map((kabab) => {
     return (
       <ImageCard
@@ -36,28 +36,33 @@ function Home(params) {
       </ImageCard>
     );
   });
-  if(pan){
+  if (pan) {
     var panier = pan.map((element) => {
-        prix = prix + 11;
-        const pain = element[0].Pain.name;
-        const viande = element[1].Viande.name;
-        const salad = element[2].Salades.map((kabab) => kabab.name + ",");
-        const sauce = element[3].Souces.map((kabab) => kabab.name + " ");
-        return (
-          <CommendDetaills>
-            {pain},{viande},{salad},{sauce}
-            <FontAwesomeIcon icon={faTrash} onClick={()=>{
-             const listeKabab= pan.filter((elem)=>{return elem[0]!==element[0]})
-             setPan(listeKabab);
-             console.log(listeKabab)
-              localStorage.removeItem('listeKabab');
-              localStorage.setItem('listeKabab',JSON.stringify( listeKabab));
-            }} />
-          </CommendDetaills>
-        );
-      });  
-}
-  
+      prix = prix + 11;
+      const pain = element[0].Pain.name;
+      const viande = element[1].Viande.name;
+      const salad = element[2].Salades.map((kabab) => kabab.name + ",");
+      const sauce = element[3].Souces.map((kabab) => kabab.name + " ");
+      return (
+        <CommendDetaills>
+          {pain},{viande},{salad},{sauce}
+          <FontAwesomeIcon
+            icon={faTrash}
+            onClick={() => {
+              const listeKabab = pan.filter((elem) => {
+                return elem[0] !== element[0];
+              });
+              setPan(listeKabab);
+              console.log(listeKabab);
+              localStorage.removeItem("listeKabab");
+              localStorage.setItem("listeKabab", JSON.stringify(listeKabab));
+            }}
+          />
+        </CommendDetaills>
+      );
+    });
+  }
+
   console.log(panier);
   return (
     <div>
@@ -66,7 +71,15 @@ function Home(params) {
       {JSON.parse(val) ? (
         <CommandeDivPanier>
           <TotalCommend>Total: {prix}$</TotalCommend>
-          {pan.length>0?(<BtnPanier onClick={()=>{history.push("/CommandeValide");}}>Passer la commande</BtnPanier>):null}
+          {pan.length > 0 ? (
+            <BtnPanier
+              onClick={() => {
+                history.push("/CommandeValide");
+              }}
+            >
+              Passer la commande
+            </BtnPanier>
+          ) : null}
           <Commande>Votre commande</Commande>
           {panier}
         </CommandeDivPanier>

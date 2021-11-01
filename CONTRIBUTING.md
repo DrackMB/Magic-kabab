@@ -13,8 +13,7 @@ ce REPO c'est la partie Front-End Qui contient :
 
 #### Dossiers & Fichiers
 *public 
-*src:
-   *asset :contient les images utiliser dans le projet . 
+*src: *asset :contient les images utiliser dans le projet . 
    *component :contient les composants de l'APP .
        *Home.js   : page d'acceulle (choix  Pain)
        *Etape2.js :2 eme page (choix de Viande)
@@ -25,6 +24,7 @@ ce REPO c'est la partie Front-End Qui contient :
        *style.js : Contient le style de app (styled-components)
    *data.js : base de donner utiliser dans l'APP .
    *App.js : contient les routes (naviger enter les component)
+  
 
 #### Comment Naviger Entre les pages (component)
 
@@ -42,7 +42,7 @@ nous avons utilisé les fonctions predefinies dans React **useHistory** et  **us
 
 plus **localStorage**
 
-#### les Fonctionalités
+#### les Fonctionalités realiser 
 
 *Proposer le choix du pain: pain, galette ou baguette.
 
